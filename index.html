@@ -1,0 +1,98 @@
+<html>
+    <head>
+    	<link rel="stylesheet" href="radar-chart.css">
+    	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+        <script src="https://d3js.org/d3.v3.min.js"></script>
+        <script type="text/javascript" src="radar-chart.js"></script>
+        <script type="text/javascript" src="test.js"></script>
+        <meta charset="utf-8"/>
+        <style>
+        div.tooltip {	
+		    position: absolute;			
+		    text-align: center;			
+		    width: auto;					
+		    height: auto;					
+		    padding: 5px;				
+		    font: 16px "century gothic";		
+		    background: #f0f0f0;	
+		    border: 0px;		
+		    border-radius: 8px;			
+		    pointer-events: none;
+		    z-index: 1000;			
+		}
+		.scatterdiv {
+			width: 1100;
+			height: 800;
+			position: absolute;
+			
+
+		}
+
+		#chart {
+			//position: absolute;
+			margin-top: 100px;
+			margin-left: 1000px;
+		}
+
+		.radar-chart .area {
+	      fill-opacity: 0.7;
+	    }
+	    .radar-chart.focus .area {
+	      fill-opacity: 0.3;
+	    }
+	    .radar-chart.focus .area.focused {
+	      fill-opacity: 0.9;
+	    }
+
+	    .heading {
+	    	margin: 0 0 10 0;
+	    	text-align: center;
+	    	font-size: 2em;
+	    	color: white;
+	    	background: #383838;
+	    	padding: 10px;
+
+	    }
+
+	    .info {
+	    	background: #f8f8f8;
+	    	padding: 20px;
+	    	margin: 150 0 0 0;
+	    	text-align: center;
+	    	font-size: 1.5em;
+	    }
+
+	    .info > hr {
+	    	width: 80%;
+	    	opacity: 0.4;
+	    }
+	    
+        </style>
+    </head>
+
+    <body>	
+    	<div class="heading"> Aggressive Play increases Opponent Errors! </div>
+    	<div class="scatterdiv"></div>
+    	
+        <div id="chart" width="100px" height="100px" style="height:500px;"></div>
+
+        <div class="info">
+        	"The Scatter-Bubble Plot demonstrates a pattern of Increased Opponent Errors with an increase in player's Aggressive Play".
+        	<br><br>
+        	<b>--- Two Interesting observations ---</b>
+        	<ol>
+        		<li>Andy Roddick has consistent Fast Serve speed, hence increased Aces in his games and he Forced more errors on his opponents with increased Aggressive play.</li>
+        		<li>Rafael Nadal has varying Fast Serve speeds but has one of the highest Aggressive margin and forced error rates than anyone else. </li>
+        	</ol>
+        	<br>
+ 
+        	<b>--- Interactions ---</b>
+        	<ol>
+        		<li>Hover on the bubbles to change view of Radar chart and also see information in tool-tip</li>
+        		<li>Click on Legend (Player Name) to enable/disable their plot</li>
+        	</ol>
+
+        </div>
+    </body>
+
+</html>
